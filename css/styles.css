@@ -1,0 +1,92 @@
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    padding: 1rem;
+    border-radius: 0.15rem;
+}
+
+.outer {
+    flex-flow: row wrap;
+    gap: 2%;
+    justify-content: space-around;
+    height: 75vh;
+}
+
+.artifacts, .controls {
+    flex-flow: column wrap;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.artifacts {
+    flex-basis: 20%;
+    border: 1px solid black;
+}
+
+.controls {
+    flex-basis: 10%
+}
+
+
+.button {
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.controls .button {
+    font-size: 2rem;
+    font-weight: bold;
+    aspect-ratio: 1;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.untapped {
+    font-size: 5rem;
+}
+
+.tapped {
+    font-size: 3rem;
+    transform: rotate(90deg);
+}
+
+.plus {
+    background: red;
+}
+
+.minus {
+    background: blue;
+}
+
+#treasure {
+    background: goldenrod;
+}
+
+#clue {
+    background: lightskyblue;
+}
+
+#food {
+    background: lightgreen;
+}
+
+#untapAll {
+    background: darkcyan;
+}
+
+#clear {
+    background: darkviolet;
+}
+
