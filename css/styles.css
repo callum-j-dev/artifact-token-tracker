@@ -16,7 +16,7 @@ html, body {
     height: 75vh;
 }
 
-.artifacts, .controls {
+.artifacts, .tokens, .controls {
     flex-flow: column wrap;
     align-items: center;
     height: 100%;
@@ -26,6 +26,10 @@ html, body {
 .artifacts {
     flex-basis: 20%;
     border: 1px solid black;
+}
+
+.tokens {
+    height: 50%;
 }
 
 .controls {
