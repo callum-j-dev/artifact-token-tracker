@@ -29,7 +29,8 @@ html, body {
 }
 
 .tokens {
-    height: 50%;
+    height: 75%;
+    width: 75%;
 }
 
 .controls {
@@ -86,7 +87,7 @@ h2 {
     background: lightgreen;
 }
 
-#untapAll {
+#untap-all {
     background: darkcyan;
 }
 
