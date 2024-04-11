@@ -124,6 +124,7 @@ untappedTreasureArea.addEventListener('click', () => {
 
 tappedTreasureArea.addEventListener('click', () => {
     treasures.untapOne();
+    console.log('untap one');
     updateTokens();
 })
 
@@ -145,23 +146,7 @@ untappedFoodArea.addEventListener('click', () => {
 tappedFoodArea.addEventListener('click', () => {
     foods.untapOne();
     updateTokens();
-})
-
-// Adding clicking events for untapping
-tappedTreasures.addEventListener('click', () => {
-    treasures.untapOne();
-    updateTokens();
 });
-
-tappedClues.addEventListener('click', () => {
-    clues.untapOne();
-    updateTokens();
-})
-
-tappedFoods.addEventListener('click', () => {
-    foods.untapOne();
-    updateTokens();
-})
 
 // Untap All and Clear buttons
 const untapAllButton = document.querySelector('#untap-all')
