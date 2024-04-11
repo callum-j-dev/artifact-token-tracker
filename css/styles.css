@@ -13,7 +13,7 @@ html, body {
     flex-flow: row wrap;
     gap: 2%;
     justify-content: space-around;
-    height: 75vh;
+    height: 90vh;
 }
 
 .artifacts, .tokens, .controls {
@@ -29,8 +29,9 @@ html, body {
 }
 
 .tokens {
-    height: 75%;
+    height: 60%;
     width: 75%;
+    justify-content: space-around;
 }
 
 .controls {
@@ -58,12 +59,24 @@ h2 {
     font-size: 2rem;
 }
 
+.untapped-area {
+    width: 100%;
+    text-align: center;
+    flex-basis: 60%;
+}
+
+.tapped-area {
+    width: 100%;
+    transform: rotate(90deg);
+    text-align: center;
+}
+
 .untapped {
-    font-size: 5rem;
+    font-size: 12vw;
 }
 
 .tapped {
-    font-size: 3rem;
+    font-size: 7vw;
     transform: rotate(90deg);
 }
 

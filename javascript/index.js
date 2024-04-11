@@ -17,6 +17,12 @@ class Artifact {
             this._tapped++;
         }
     }
+    untapOne() {
+        if (this._tapped > 0) {
+            this._untapped++;
+            this._tapped--;
+        }
+    }
     untapAll() {
         this._untapped += this._tapped;
         this._tapped = 0;
@@ -50,6 +56,13 @@ console.log('ready for clicks');
 const treasureBox = document.querySelector('#treasure-tokens');
 const clueBox = document.querySelector('#clue-tokens');
 const foodBox = document.querySelector('#food-tokens');
+
+const untappedTreasureArea = treasureBox.querySelector('.untapped-area');
+const tappedTreasureArea = treasureBox.querySelector('.tapped-area');
+const untappedClueArea = clueBox.querySelector('.untapped-area');
+const tappedClueArea = clueBox.querySelector('.tapped-area');
+const untappedFoodArea = foodBox.querySelector('.untapped-area');
+const tappedFoodArea = foodBox.querySelector('.tapped-area');
 
 console.log('boxes assigned');
 
@@ -102,20 +115,51 @@ minusFood.addEventListener('click', () => {
     updateTokens();
 })
 
-// Adding click events for tapping
-treasureBox.addEventListener('click', () => {
+// Adding click events for tapping/untapping
+untappedTreasureArea.addEventListener('click', () => {
     console.log('tapping treasure')
     treasures.tapOne();
     updateTokens();
 });
 
-clueBox.addEventListener('click', () => {
+tappedTreasureArea.addEventListener('click', () => {
+    treasures.untapOne();
+    updateTokens();
+})
+
+untappedClueArea.addEventListener('click', () => {
     clues.tapOne();
     updateTokens();
 });
 
-foodBox.addEventListener('click', () => {
+tappedClueArea.addEventListener('click', () => {
+    clues.untapOne();
+    updateTokens();
+})
+
+untappedFoodArea.addEventListener('click', () => {
     foods.tapOne();
+    updateTokens();
+});
+
+tappedFoodArea.addEventListener('click', () => {
+    foods.untapOne();
+    updateTokens();
+})
+
+// Adding clicking events for untapping
+tappedTreasures.addEventListener('click', () => {
+    treasures.untapOne();
+    updateTokens();
+});
+
+tappedClues.addEventListener('click', () => {
+    clues.untapOne();
+    updateTokens();
+})
+
+tappedFoods.addEventListener('click', () => {
+    foods.untapOne();
     updateTokens();
 })
 
