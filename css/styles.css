@@ -1,7 +1,18 @@
+* {
+    box-sizing: border-box;
+}
 
 html, body {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
 }
+
+/* @media screen and (max-width: 750px) and (orientation: landscape){
+    html, body {
+        height: 360px;
+        width: 650px;
+    }
+} */
 
 .container {
     display: flex;
@@ -13,23 +24,23 @@ html, body {
     flex-flow: row wrap;
     gap: 2%;
     justify-content: space-around;
-    height: 90vh;
+    height: 100%;
 }
 
 .artifacts, .tokens, .controls {
     flex-flow: column wrap;
     align-items: center;
-    height: 100%;
+    height: 95%;
     justify-content: space-between;
 }
 
 .artifacts {
-    flex-basis: 20%;
+    flex-basis: 25%;
     border: 1px solid black;
 }
 
 .tokens {
-    height: 60%;
+    height: 50%;
     width: 75%;
     justify-content: space-around;
 }
@@ -56,7 +67,7 @@ html, body {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 5vh;
 }
 
 .untapped-area {
@@ -72,11 +83,11 @@ h2 {
 }
 
 .untapped {
-    font-size: 12vw;
+    font-size: 14vh;
 }
 
 .tapped {
-    font-size: 7vw;
+    font-size: 8vh;
     transform: rotate(90deg);
 }
 
